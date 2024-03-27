@@ -6,6 +6,6 @@
 4. 
 
 ## What I learnt/re-learnt today:
-1. Testing in Python - Check out [here](./Day%205%20-%2027th%20Mar/Testing%20in%20Python.md)!
+1. Testing in Python - Check out [here](./Testing%20in%20Python.md)!
 2. Classes and Objects in python
-3. Exception Handling
+3. Exception Handling - Check out [here](./Exception%20Handling.md)!
