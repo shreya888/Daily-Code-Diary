@@ -6,5 +6,6 @@
 
 ## What I learnt/re-learnt today:
 1. Classes and Objects in python
-2. Testing in Python - Check out [here](./Testing%20in%20Python.md)!
-3. Exception Handling - Check out [here](./Exception%20Handling.md)!
+2. Walrus Operator (:=)
+3. Testing in Python - Check out [here](./Testing%20in%20Python.md)!
+4. Exception Handling - Check out [here](./Exception%20Handling.md)!
