@@ -32,5 +32,5 @@ encryption = caesar(text, shift)
 print(f'Encrypted text: {encryption}')
 
 # Decrypting using Caesar cipher with a shift of 3 in opposite direction
-decryption = caesar(encryption, -3)
+decryption = caesar(encryption, -1*shift)
 print(f'Decrypted text: {decryption}')
