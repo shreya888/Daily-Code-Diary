@@ -18,12 +18,20 @@
 * Inspired by Java's JUnit framework, Python provides support for unit testing through libraries like `unittest`.
 
 ### 4. Best Practices for Testing in Python
-* **Write Clear and Descriptive Test Cases**: Test cases should be easy to understand and maintain, with descriptive names and comments to explain their purpose.
-* **Keep Tests Independent and Isolated**: Tests should be independent of each other and should not rely on the state or behavior of other tests. Use fixtures and setup/teardown methods to ensure test isolation.
-* **Use Mocking and Dependency Injection**: Use mocking frameworks like `unittest.mock` or `pytest-mock` to mock external dependencies and isolate the unit under test.
-* **Automate Testing Processes**: Integrate testing into your development workflow by automating test execution using continuous integration (CI) tools like Jenkins, Travis CI, or GitHub Actions.
-* **Prioritize Test Coverage**: Aim for comprehensive test coverage to ensure that all critical parts of your codebase are tested. Use code coverage tools like `coverage.py` to measure and improve test coverage.
-* **Regularly Refactor and Maintain Tests**: Refactor and maintain your tests regularly to keep them up-to-date with changes in the codebase and evolving requirements.
+1. **Write Clear and Descriptive Test Cases**: Ensure test cases are easy to understand and maintain by using descriptive names and comments to explain their purpose.
+2. **Keep Tests Independent and Isolated**: Use fixtures and setup/teardown methods to ensure that each test runs with a fresh dataset, promoting test independence and isolation.
+3. **Use Mocking and Dependency Injection**: Utilize mocking frameworks like `unittest.mock` or `pytest-mock` to isolate the unit under test and mock external dependencies.
+4. **Automate Testing Processes**: Integrate testing into your workflow by automating test execution with continuous integration (CI) tools like Jenkins, Travis CI, or GitHub Actions.
+5. **Prioritize Test Coverage and Speed**: Aim for comprehensive test coverage while ensuring tests run efficiently to facilitate rapid development iterations. Optimize slow-running tests and consider running heavier tests separately.
+6. **Learn and Utilize Testing Tools Efficiently**: Familiarize yourself with testing tools such as `unittest` and `pytest`, learning to run individual tests or test cases efficiently to streamline your testing workflow.
+7. **Run Tests Before and After Development Sessions**: Validate the stability of the codebase by running the full test suite before and after coding sessions to detect regressions promptly.
+8. **Implement Pre-Push Hooks**: Set up pre-push hooks to automatically run the test suite before pushing code to shared repositories, ensuring that only passing code is pushed.
+9. **Write Broken Tests for Planned Development**: Outline expected behavior by writing broken unit tests before developing new features or fixes, serving as a roadmap for development.
+10. **Debug with Test Cases**: Isolate bugs by writing new test cases that pinpoint issues during debugging, ensuring thorough testing of bug fixes to prevent regressions.
+11. **Use Descriptive Test Function Names**: Enhance readability by using descriptive names for testing functions that clearly indicate their purpose and the scenarios they test.
+12. **Maintain Readable Testing Code**: Treat testing code with the same care as production code by writing clear, well-documented tests that serve as valuable documentation for the codebase, aiding in maintenance and future development.  
+
+By incorporating these best practices into your testing workflow, the effectiveness and maintainability of testing process would be enhanced, leading to more reliable and robust Python applications.
 
 ### References
 1. [Real Python - Python Testing](https://realpython.com/python-testing/)
