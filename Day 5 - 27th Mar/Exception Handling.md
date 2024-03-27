@@ -5,7 +5,7 @@ Exception handling is a fundamental aspect of programming. Errors detected <em>d
 ## Syntax and Usage of Exception Handling Constructs
 Python's exception handling mechanism revolves around four main keywords:
 1. **try**: The `try` block is used to wrap the code that may raise an exception. If an exception occurs within the `try` block, Python looks for an appropriate `except` block to handle it.
-2. **except**: The `except` block catches and handles exceptions raised within the corresponding `try` block. It allows developers to specify how to handle specific types of exceptions or generic exceptions.
+2. **except**: The `except` block catches and handles exceptions raised within the corresponding `try` block. It allows developers to specify how to handle specific types of exceptions or generic exceptions. Code can have as many exception blocks as needed.
 3. **else (optional)**: The `else` block is executed if no exceptions occur within the `try` block. It is typically used to execute code that should run only if the `try` block completes successfully.
 4. **finally (optional)**: The `finally` block is executed regardless of whether an exception occurs in the `try` block. It is executed as the last task before the try statement completes. It is commonly used for cleanup operations, such as closing files or releasing resources.
 ```python
@@ -29,8 +29,23 @@ finally:
     # Cleanup code that always runs
     cleanup_operations()
 ```
-Flowchart below explains the flow in a program:
+Flowchart below explains the flow in a program: [[3](https://rollbar.com/blog/throwing-exceptions-in-python)]
 
 ![image](https://github.com/shreya888/Daily-Code-Diary/assets/25200389/c8c39f53-b71d-4b24-bbb2-8d19d3ec3da7)
 
+
+## Common Types of Exceptions
+Python provides a wide range of built-in exception types to handle different error scenarios. Some common built-in exceptions include:
+* `ZeroDivisionError`: Raised when division or modulo by zero occurs.
+* `TypeError`: Raised when an operation or function is applied to an object of an inappropriate type.
+* `ValueError`: Raised when a built-in operation or function receives an argument of the correct type but with an inappropriate value.
+* `FileNotFoundError`: Raised when attempting to access a file or directory that does not exist.
+* `KeyError`: Raised when a dictionary key is not found.
+* `NameError`: Raised when an identifier is not found in the local or global namespace.
+
+Read more at [[2](https://docs.python.org/3/library/exceptions.html)].
+
+## Error vs. Exception
+* Error typically refers to a syntax or logic mistake in the code that prevents it from executing.
+* Exception is an event that disrupts the normal flow of the program during execution, often due to external factors such as bad data, broken network connectivity, corrupted databases, memory pressures, unexpected/invalid user inputs or resource unavailability.
 
