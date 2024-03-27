@@ -1,4 +1,4 @@
-text = 'mrttaqrhknsw ih puggrur'  # Original text to be encrypted and decrypted
+text = 'Coding is Awesome!'  # Original text to be encrypted and decrypted
 custom_key = 'happycoding'  # Custom key used for encryption and decryption
 
 # Function to perform Vigenere encryption or decryption
@@ -72,9 +72,9 @@ def decrypt(message: str, key: str) -> str:
     return vigenere(message, key, -1)
 
 # Example usage
-print(f'\nOriginal text: {text}')
+print(f'Original text: {text}')
 print(f'Key: {custom_key}')
 encryption = encrypt(text, custom_key)
-print(f'\nEncrypted text: {encryption}')
+print(f'Encrypted text: {encryption}')
 decryption = decrypt(encryption, custom_key)
 print(f'Decrypted text: {decryption}\n')
