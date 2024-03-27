@@ -1,5 +1,5 @@
 # Day 5 - 27th March 2024
-## What I code today:
+## What I coded today:
 1. My Code -
 2. Link to project - https://www.freecodecamp.org/learn/scientific-computing-with-python/learn-classes-and-objects-by-building-a-sudoku-solver/
 3. 
