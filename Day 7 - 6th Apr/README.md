@@ -1,4 +1,4 @@
-# Day 7 - 5th April
+# Day 7 - 6th April
 
 ### ML Algorithm vs Traditional Programming:
 * **Traditional** - Given inputs and rules (function), what is the output?
