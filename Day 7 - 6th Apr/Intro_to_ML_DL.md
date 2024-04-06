@@ -64,39 +64,54 @@
   - **Key Concepts**:
     - **Training Data**: Consists of input-output pairs. Train -> Validate -> Test (mutually exclusive datapoints)
     - **Loss Function**: Measures the discrepancy between predicted and actual outputs.
+    - **Generalization**: The ability of the model to perform well on unseen data.
+    - **Overfitting vs. Underfitting**: Balancing model complexity to avoid learning noise or being too simplistic.
+    - **Evaluation Metrics**: Measures to assess model performance such as accuracy, precision, recall, and F1-score.
     - **Examples**: Classification, Regression.
 
 * **Unsupervised Learning**:
   - **Definition**: Discovering patterns and structures in data without explicit labels.
   - **Key Concepts**:
-    - **Clustering**: Grouping similar data points together.
     - **Dimensionality Reduction**: Reducing the number of features while preserving essential information.
+    - **Clustering Algorithms**: Techniques such as K-means, hierarchical clustering, and DBSCAN for grouping similar data points.
+    - **Dimensionality Reduction**: Reducing the number of features while preserving essential information. e.g. Principal Component Analysis (PCA), t-distributed Stochastic Neighbor Embedding (t-SNE) etc.
+    - **Density Estimation**: Estimating the underlying probability distribution of the data.
     - **Examples**: Clustering, Dimensionality Reduction, Anomaly Detection.
 
 * **Self-supervised Learning**:
-  - **Definition**: Generating labels from the data itself, often by predicting missing parts of the input.
+  - **Definition**: Generating labels from the data itself, typically by solving auxiliary tasks that are designed to provide supervision signals without human-labeled data.
   - **Key Concepts**:
-    - **Auxiliary Tasks**: Training a model to solve related tasks that indirectly benefit the primary task.
+    - **Auxiliary Tasks**: Training a model to solve related tasks that indirectly benefit the primary task. Example:
+      - **Contrastive Learning**: Learning representations by contrasting positive and negative examples.
+      - **Autoencoding**: Training models to reconstruct the input from corrupted or incomplete versions.
+      - **Temporal Ordering**: Predicting the temporal order of sequences without explicit supervision.
     - **Examples**: Predicting missing words in a sentence (Masked Language Model), Image Inpainting.
 
 * **Semi-supervised Learning**:
   - **Definition**: Combining labeled and unlabeled data for training, leveraging the abundance of unlabeled data.
   - **Key Concepts**:
-    - **Utilization of Unlabeled Data**: Incorporating unlabeled data to improve model performance.
+    - **Label Propagation**: Propagating labels from labeled to unlabeled data points based on their similarity.
+    - **Consistency Regularization**: Ensuring model predictions remain consistent under small perturbations of the input.
+    - **Manifold Assumption**: Assuming that data points close to each other in the input space should have similar labels.
     - **Examples**: Pseudo-labeling, Co-training, Tri-training.
 
 * **Reinforcement Learning**:
   - **Definition**: Learning through interaction with an environment to achieve a goal by receiving rewards or penalties.
   - **Key Concepts**:
     - **Agent-Environment Interaction**: The agent takes actions in an environment and receives feedback in the form of rewards and observations.
-    - **Exploration vs. Exploitation**: Balancing between trying out new actions and exploiting known actions.
+    - **Exploration-Exploitation Tradeoff**: Balancing between trying out new actions (exploration) and exploiting known actions (exploitation).
+    - **Markov Decision Process (MDP)**: A mathematical framework to model sequential decision-making under uncertainty.
+    - **Policy Learning**: Learning a strategy (policy) to select actions in different states of the environment.
     - **Examples**: Game Playing (e.g., AlphaGo), Robotics, Autonomous Driving.
 
 * **Transfer Learning**:
   - **Definition**: Utilizing knowledge gained from one task to improve learning in another task, often by transferring learned features or parameters.
   - **Key Concepts**:
     - **Pre-trained Models**: Models trained on large-scale datasets and fine-tuned on task-specific data.
-    - **Feature Extraction vs. Fine-tuning**: Transfer learning can involve either using pre-trained models as feature extractors or fine-tuning the entire model.
+    - **Domain Adaptation**: Adapting the model to a new domain with different data distributions.
+    - **Fine-tuning**: Fine-tuning pre-trained models on task-specific data to adapt them to new tasks.
+    - **Knowledge Distillation**: Transferring knowledge from a large, complex model to a smaller, simpler model; teacher to student.
+    - **Feature Extraction vs. Fine-tuning**: Transfer learning can involve either using pre-trained models as feature extractors for bigger models or just fine-tuning the entire model or later few layers.
     - **Examples**: Image Classification (using pre-trained models like VGG, ResNet), Natural Language Processing (using pre-trained language models like BERT, GPT).
 
 
