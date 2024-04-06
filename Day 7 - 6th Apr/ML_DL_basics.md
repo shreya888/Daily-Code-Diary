@@ -1,5 +1,3 @@
-# Day 7 - 6th April
-
 ### ML Algorithm vs Traditional Programming:
 * **Traditional** - Given inputs and rules (function), what is the output?
 * **ML** - Given the inputs and the desired outputs, what are the rules (functions)?
