@@ -44,7 +44,10 @@
 
 <img src="https://github.com/shreya888/Daily-Code-Diary/assets/25200389/f79e4a4e-0258-46d2-b3d5-d586c25cbc71" width=60%>
 
+**Overall Architecture:**
 * Inner Layer - Data goes in here
 * Hidden Layer(s) - Learns patterns in data
 * Output Layer - Ouputs learned representation or prediction probabilities
 
+Patterns = Embeddings = Weights = Feature Representation = Feature Vector
+* Each layer is a combination of linear and non-linear functions
