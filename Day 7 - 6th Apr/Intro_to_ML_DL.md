@@ -14,6 +14,7 @@
   * Problems with a long list of rules (e.g., self-driving car rules)
   * Continually changing environments (DL can adapt/learn)
   * Discovering new insights within large collections of data
+  * ML over a complex heuristic (unmaintainable)
 * When NOT to use ML/DL (typically):
   * Need for explainability (typically uninterpretable by humans)
   * When traditional approaches are better suited
@@ -59,8 +60,8 @@
 
 *Each layer is a combination of linear and non-linear functions.*
 
-### Different Learning Paradigms
 
+### Different Learning Paradigms
 * **Supervised Learning**:
   - **Definition**: Learning from labeled data, where the model learns to map input data to known output labels.
   - **Key Concepts**:
@@ -117,6 +118,16 @@
     - **Examples**: Image Classification (using pre-trained models like VGG, ResNet), Natural Language Processing (using pre-trained language models like BERT, GPT).
 
 
+### Other Common Terminology in ML/DL
+* **Instance**: An individual data point or observation in a dataset, typically represented as a single row, which you want to make a prediction for.
+* **Label**: The output of prediction task or target variable that either the model is trying to predict or the right output supplied in training data.
+* **Feature**: An input variable or property/attribute that is used in prediction tasks. Features can be numeric, categorical, or textual, and they provide information about the instances in a dataset.
+* **Feature Column**: A column in a dataset that represents a specific feature. Each feature column contains values corresponding to the instances in the dataset.
+* **Example**: A combination of an instance (with features) and it's label in a dataset.
+* **Model**: A mathematical/statistical representation or algorithm of prediction task (learns patterns from data to make predictions or decisions). Models can be trained using various machine learning and deep learning techniques.
+* **Metric**: A measure used to evaluate the performance of a model. Common metrics include accuracy, precision, recall, F1-score, mean squared error (MSE), and mean absolute error (MAE). A number u care about but cannot directly optimize.
+* **Objective**: The goal or objective function or metric that the model aims to optimize during training. It defines the criteria for assessing the model's performance and guides the learning process.
+* **Pipeline**: A sequence of data processing components or steps that are chained together to automate the machine learning workflow. Pipelines typically include data preprocessing, feature extraction, model training, and evaluation stages.
 
 
 
