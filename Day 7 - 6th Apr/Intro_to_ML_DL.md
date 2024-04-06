@@ -62,7 +62,7 @@
 * **Supervised Learning**:
   - **Definition**: Learning from labeled data, where the model learns to map input data to known output labels.
   - **Key Concepts**:
-    - **Training Data**: Consists of input-output pairs.
+    - **Training Data**: Consists of input-output pairs. Train -> Validate -> Test (mutually exclusive datapoints)
     - **Loss Function**: Measures the discrepancy between predicted and actual outputs.
     - **Examples**: Classification, Regression.
 
