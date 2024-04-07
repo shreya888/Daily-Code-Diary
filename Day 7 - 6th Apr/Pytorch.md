@@ -10,3 +10,12 @@
 * GPU (Graphic Processing Unit) - Specialized hardware component designed for parallel processing of large blocks of data.
 * Originally developed for rendering graphics in video games and multimedia applications, GPUs have evolved into powerful computational engines capable of accelerating a wide range of tasks, including deep learning.
 * TPU (Tensor Processing Unit) - Custom-designed hardware accelerator developed by Google specifically for accelerating machine learning workloads, particularly those involving tensor operations.
+
+### What is Tensor?
+* Mathematical object that generalizes scalars, vectors, and matrices to higher dimensions. (multi-dimensional arrays)
+* Primary/Fundamental data structures in DL used to represent input data, model parameters, and output data etc. componenets of DL pipeline throughout the computational graph.
+  
+| | | | |
+|-|-|-|-|
+| Scalar | Vector | Matrix | Tensor |
+| 0D | 1D | 2D | Multi-D |
