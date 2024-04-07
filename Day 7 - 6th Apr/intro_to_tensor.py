@@ -10,17 +10,20 @@ MATRIX = torch.tensor([[1, 2], [6, 8]])
 print(f"Dimensions of scalar: {scalar.ndim}, vector: {vector.ndim}, and matrix: {MATRIX.ndim}")
 print(f"Shape of matrix: {MATRIX.shape}")
 
-# Randomized creation of tensor
+# Random Tensors - v imp because:
+# NN start with tensors full of random numbers and then adjust those to better represent data
 x = torch.empty(2, 3)  # Accesses random memory location (cannot be controlled)
-x = torch.rand(2, 3)  # Can be controlled by seed
+# Most commonly used
+rand_tensor = torch.rand(2, 3)  # Can be controlled by seed; Give shape/size as argument
+# Zeros and Ones
 x = torch.zeros(2, 3)  # Initialize all values to 0s
-x = torch.ones(2, 3)  # Initialize elements to 1s
+x = torch.ones(2, 3)  # Initialize all elements to 1s
 
 # Get tensor back - use only iff it is scalar or single element reference
 print(f"Get scalar tensor back: {scalar.item()}")
 
 # Check type of tensor using dtype
-print(f"\nTensor: {x}, and dtype: {x.dtype}")  # By default, it is float32 type
+print(f"\nRandom Tensor: {rand_tensor}, and dtype: {rand_tensor.dtype}")  # By default, it is float32 type
 
 # But can define the dtype when initializing
 x = torch.ones(2, 3, dtype=torch.int)
@@ -36,3 +39,7 @@ TENSOR = torch.tensor([[[1, 2, 3],
                         [7, 8, 9]]])
 print(f"Tensor dimension: {TENSOR.ndim} and shape: {TENSOR.shape}")
 print(TENSOR[0])  # Meaning we have one dimension of 3X3
+
+# Create a random tensor with similar shape to an image tensor
+rand_image_size_tensor = torch.rand(size=(3,244,244))  # Color Channel, Height, Width
+print(f"\nrand_image_size_tensor - ndim: {rand_image_size_tensor.ndim}, shape: {rand_image_size_tensor.shape}")
