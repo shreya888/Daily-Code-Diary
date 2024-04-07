@@ -43,3 +43,9 @@ print(TENSOR[0])  # Meaning we have one dimension of 3X3
 # Create a random tensor with similar shape to an image tensor
 rand_image_size_tensor = torch.rand(size=(3,244,244))  # Color Channel, Height, Width
 print(f"\nrand_image_size_tensor - ndim: {rand_image_size_tensor.ndim}, shape: {rand_image_size_tensor.shape}")
+
+# Create a range of tensor and tensors-like
+one_to_ten = torch.range(1, 11, 1)  # Like the normal range function; same as torch.arange function
+print(f"one_to_ten: {one_to_ten}")
+ten_zeros = torch.zeros_like(one_to_ten)
+print(f"ten_zeros: {ten_zeros}")
