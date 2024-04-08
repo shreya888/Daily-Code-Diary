@@ -24,3 +24,7 @@
 * Tensors not right *datatype* (tensor.dtype)
 * Tensors not right *shape* (tensor.shape)
 * Tensors not on the right *device* (tensor.device)
+
+### Matrix Multiplication Rules:
+1. *Inner dimensions* must match (inner most number in dimension of 1st matrix (right most in shape) == outer most number in dimension of 2nd matrix (left most in shape))
+2. Resulting matrix will have shape of *outer dimension** (left most in shape of 1st, right most in shape of 2nd)
