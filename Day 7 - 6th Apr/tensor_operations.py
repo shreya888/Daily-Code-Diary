@@ -30,7 +30,7 @@ x = torch.rand(5, 3)
 print(x[:, 0])  # Get all rows for 0th column
 print(x[1, :])  # Get row number 1 but all columns
 print(x[1, 1])  # Get element at position 1,1
-# If have only 1 element and want to get the actual value use:
+# If, have only 1 element and want to get the actual value use:
 print(x[1, 1].item())
 
 
@@ -41,3 +41,11 @@ y = x.view(16)  # Convert to 1D vector; number of elements must still be the sam
 # we can just write "-1" and Pytorch will calculate it
 y = x.view(8, -1)
 print(y.size())
+
+# Transpose - switches axes or dimensions of a given tensor; matrix manipulation
+# Transpose shape of one of the matrix to fix our shape issue in matmul error
+tensor_A = torch.rand(2,3)
+tensor_B = torch.rand(2,3)
+print(f"Original shape - tensor_B: {tensor_B.shape}, Transposed shape: {tensor_B.T.shape}, tensor_A stays the same: {tensor_A.shape}")
+print(f"Multiplying: {tensor_A.shape}, {tensor_B.T.shape} <- Inner dimensions must match")
+print(f"Output shape: {torch.mm(tensor_A, tensor_B.T).shape} <- Outer dimensions rule")
