@@ -21,6 +21,7 @@ y.add_(x)  # Modifies y
 # Matrix Multiplication (Dot Product)
 z = torch.matmul(x,y)
 z = x @ y  # same operation
+z = torch.mm(x, y)  # same operation
 print(f"Element-wise multiplication (mul): {torch.mul(x,y)}, Matrix multiplication (matmul): {torch.matmul(x,y)}")
 
 # Slicing operations like numpy
