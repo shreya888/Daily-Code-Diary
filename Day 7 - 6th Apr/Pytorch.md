@@ -19,3 +19,8 @@
 |-|-|-|-|
 | Scalar | Vector | Matrix | Tensor |
 | 0D | 1D | 2D | Multi-D |
+
+### Common mistakes
+* Tensors not right *datatype* (tensor.dtype)
+* Tensors not right *shape* (tensor.shape)
+* Tensors not on the right *device* (tensor.device)
