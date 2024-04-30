@@ -32,14 +32,14 @@ Generative Adversarial Networks (GANs) are a class of machine learning technique
 GANs utilize two main loss functions, one for each component.
 
 ![image](https://github.com/shreya888/Daily-Code-Diary/assets/25200389/6fd5e093-8a46-407e-b0d7-cb007e1fa07d)
-* **z**: generated data sample
-* **x**: real data sample
-* **D(x)**: probability that x came from the data rather than pg (probability of real data to be real)
-* **log(D(x))**: classify if sample came from real or fake distribution; as it real here, it should ideally output 1. Ideally, log(D(x)) = log(1) = 0
-* **G(z)**: generated image
-* **D(G(z))**: classify the (generated) output as real or fake; as it is fake (generated) here, it should ideally output 0.
+* **z**: Generated data sample
+* **x**: Real data sample
+* **D(x)**: Probability that x came from the data rather than pg (probability of real data to be real)
+* **log(D(x))**: Classify if sample came from real or fake distribution; as it real here, it should ideally output 1. Ideally, log(D(x)) = log(1) = 0
+* **G(z)**: Generated image
+* **D(G(z))**: Discriminator's estimate of the probability that a fake instance is real; as it is fake (generated) here, it should ideally output 0.
 * **log(1 - D(G(z)))**: Ideally, log(1 - D(G(z))) = log(1 - 0) = log(1) = 0
-* **m**: size of minibath (used to average the loss over the samples)
+* **m**: Size of minibath (used to average the loss over the samples)
 
 * **Generator Loss**: The generator aims to minimize this loss, which measures how well the generator is fooling the discriminator. Alternatively, we can train G to maximize log D(G(z)) because log(1 − D(G(z))) can/will saturate.
 * **Discriminator Loss**: The discriminator aims to minimize this loss, which measures how well it can differentiate between real and fake data. Represented by log(D(x)).
