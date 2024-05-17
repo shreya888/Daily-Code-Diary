@@ -1,5 +1,6 @@
 # Generative Adversarial Networks Fundamental Concepts
 Generative Adversarial Networks (GANs) are a class of machine learning techniques that consist of two networks playing an adversarial game against each other. Both the generator and discriminator start training from scratch, typically initialized with random noise, and train simultaneously. When training begins, the generator produces obviously fake data, and the discriminator quickly learns to tell that it's fake. Finally, if generator training goes well, the discriminator gets worse at telling the difference between real and fake. It starts to classify fake data as real, and its accuracy decreases.
+
 <img src="https://github.com/shreya888/Daily-Code-Diary/assets/25200389/01b0d0ed-2b79-4e67-bf0f-a0adaf643154" width="500">
 
 ## Generator Network (G)
