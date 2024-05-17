@@ -58,7 +58,8 @@ In order to understand how we got to ChatGPT (OpenAI), LaMDA (Google) and LLaMA 
   * How? Modify the input structure depending on the task -> Fine-tune the model on task specific data
 
 
-
+## Weakness OR Feature
+1. **Hallucinations** - generation of content that is irrelevant, made-up, or inconsistent with the input data affecting LLMs' reliability. This problem leads to incorrect information, challenging the trust placed in these models. However, if the model is expected to be creative e.g. generate story in a style, then it can counted a feature.
 
 
 
