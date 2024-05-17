@@ -65,3 +65,4 @@ GANs have found applications in various domains, including:
 4. Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, et al. "Image-to-Image Translation with Conditional Adversarial Networks." arXiv:1611.07004, 2016.
 5. [Deep Learning: Introduction of Generative Adversarial Networks (GANs) (TDS article) - image 1](https://towardsdatascience.com/deep-learning-introduction-of-generative-adversarial-networks-gans-ae22c4350b1f)
 6. [Overview of GAN Structure (Google) - image 2](https://developers.google.com/machine-learning/gan/gan_structure)
+7. [Generative Adversarial Networks (GANs) - Aladdin Persson code](https://www.youtube.com/playlist?list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va)
