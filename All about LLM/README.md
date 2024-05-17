@@ -32,10 +32,30 @@ In order to understand how we got to ChatGPT (OpenAI), LaMDA (Google) and LLaMA 
 12. **PaLM - "Scaling Language Modeling with Pathways" by Zhang et al. (2021)**: PaLM (Pretrained Autoencoding Language Model), tailored for question answering tasks, proposed a new paradigm for text generation by leveraging autoencoding techniques. Unlike traditional autoregressive language models (ALM, GPT) that predict the next token given previous context, PaLM reconstructs the entire input sequence from a corrupted version, encouraging the model to capture higher-level semantic structures. PaLM is thus able to improve comprehension and accuracy in answering complex questions by reasoning over paths in knowledge graphs. By pretraining on large corpora with autoencoding objectives, PaLM achieves state-of-the-art performance in various text generation tasks, including machine translation, summarization, and dialogue generation. This paper highlights the effectiveness of autoencoding approaches in learning meaningful representations for text generation, paving the way for further advancements in language modeling.
 
 
-
-
-
-
+## GPT Models
+* GPT 1,2,3 are successive language models trained to predict the next token in a sequence.
+* They share similar fundamental architecture with masked multi-head self-attention (only decoder) transformers of 12, 48, 96 blocks respectively.
+* How different to previous models -
+  * Used transformers
+  * More training data (by many times)
+  * More computational power used
+* Dataset
+  * GPT - BookCorpus dataset ~1GB text
+  * GPT-2 - WebText dataset: Every web-page that has been linked to from Reddit with a rating of 3+ ~ 40GB raw text
+  * GPT-3 - Common Crawl (filtered), WebText2, Books1/2, Wikipedia (en)
+* Pre-training
+  * Next word prediction
+  * Cross-entropy loss
+  * Large amount of data (self-supervised)
+  * One-time process
+* Fine-tuning
+  * Start the parameters from where pre-training finished
+  * Normally uses a small learning rate
+  * Task specific loss
+  * Task specific data
+  * Needs to be done for every task
+  * May add extra layers compared to pre-training
+  * How? Modify the input structure depending on the task -> Fine-tune the model on task specific data
 
 
 
