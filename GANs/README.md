@@ -62,6 +62,12 @@ GANs have found applications in various domains, including:
 1. FCGAN - fully connected NN
 2. DCGAN - CNN instead
 
+## Limitations and Weakness
+1. The generator and discriminator continuously adapt to each other leading to notoriously unstable training. Finding the right balance between the generator and discriminator can be challenging. Achieving convergence to a stable equilibrium can be challenging.
+2. GANs are extremely sensitive to hyperparamters such as learning rates, network architectures, and batch sizes. Finding the optimal set of hyperparameters can be time-consuming and requires extensive experimentation.
+3. They require large amounts of training data to learn effectively.
+4. GANs can be misused for generating deepfakes, generating biased or offensive content, or infringing on privacy rights.
+
 ## References
 1. Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, et al. "Generative Adversarial Networks." In Advances in Neural Information Processing Systems 27, 2014. [Paper](https://arxiv.org/abs/1406.2661)
 2. Martin Arjovsky, Soumith Chintala, Léon Bottou. "Wasserstein GAN." arXiv:1701.07875, 2017.
