@@ -58,11 +58,16 @@ GANs have found applications in various domains, including:
 * Semi-supervised Learning: Techniques like SRGAN (Super-Resolution GAN) utilize GANs for enhancing the resolution of images and other semi-supervised learning tasks.
 * Style Transfer: GANs can transfer the style of one image onto another, enabling artistic transformations and image editing.
 
+## Implementations
+1. FCGAN - fully connected NN
+2. DCGAN - CNN instead
+
 ## References
-1. Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, et al. "Generative Adversarial Networks." In Advances in Neural Information Processing Systems 27, 2014.
+1. Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, et al. "Generative Adversarial Networks." In Advances in Neural Information Processing Systems 27, 2014. [Paper](https://arxiv.org/abs/1406.2661)
 2. Martin Arjovsky, Soumith Chintala, Léon Bottou. "Wasserstein GAN." arXiv:1701.07875, 2017.
 3. Christian Ledig, Lucas Theis, Ferenc Huszar, et al. "Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network." arXiv:1609.04802, 2016.
 4. Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, et al. "Image-to-Image Translation with Conditional Adversarial Networks." arXiv:1611.07004, 2016.
 5. [Deep Learning: Introduction of Generative Adversarial Networks (GANs) (TDS article) - image 1](https://towardsdatascience.com/deep-learning-introduction-of-generative-adversarial-networks-gans-ae22c4350b1f)
 6. [Overview of GAN Structure (Google) - image 2](https://developers.google.com/machine-learning/gan/gan_structure)
-7. [Generative Adversarial Networks (GANs) - Aladdin Persson code](https://www.youtube.com/playlist?list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va)
+7. [Generative Adversarial Networks (GANs)](https://www.youtube.com/playlist?list=PLhhyoLH6IjfwIp8bZnzX8QR30TRcHO8Va)
+8. [Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks - DCGAN paper](https://arxiv.org/abs/1511.06434)
