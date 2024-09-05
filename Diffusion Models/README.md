@@ -89,3 +89,70 @@ The process relies on a noise schedule, a sequence that dictates how much noise 
 ### Challenges:
 * **Computationally Intensive**: Sampling can be computationally expensive because it requires many iterations, each involving the model running complex computations.
 * **Trade-off Between Speed and Quality**: Faster sampling methods exist but often at the cost of the quality or diversity of the generated images.
+
+-----------------------------------------------------------------------------------------
+
+# Neural Network behind Diffusion (Generally UNet)
+Diffusion models commonly use the U-Net architecture, a neural network well-suited for image generation tasks due to its ability to capture both fine details and overall structures in images, thanks to its unique architecture. The U-Net architecture is crucial in both the noising and denoising processes in diffusion models.
+
+### Key Features of U-Net in Diffusion Models:
+#### 1. Encoder-Decoder Structure:
+The U-Net has an encoder-decoder structure. In diffusion models, the output size should be the same as input such that full resolution of image is processed. This is ensured by U-Net, where the size of output is always the same as the input size.
+  * **Encoder (Downsampling Path)**: Compresses the input image by progressively reducing its resolution and extracting high-level features through convolutional layers and pooling operations.
+  * **Decoder (Upsampling Path)**: Mirrors the encoder but reverses the process, gradually restoring the image to its original size using upsampling layers. This helps recover fine details from the original image.
+
+#### 2. Skip Connections:
+
+Used to link layers from the encoder directly to the decoder at corresponding levels. These connections transfer detailed information from the downsampling path to the upsampling path, helping preserve fine-grained features that might otherwise be lost during compression.
+
+#### 3. Handling Additional Information via Embeddings:
+
+The U-Net in diffusion models can incorporate additional information in the form of embeddings that modify the generation process:
+  * **Temporal Embedding (temb)**: Provides information about the time step (or noise level) in the diffusion process, allowing the model to adjust its predictions based on how much noise is present at each iteration.
+  * **Context Embedding (cemb)**: Can be used to control the image generation process, for example by conditioning on text descriptions or other factors, allowing for guided generation (e.g., text-to-image models).
+
+These embeddings are incorporated into the network's forward pass, often added or multiplied into the upsampling layers to modulate the output.
+
+##### Example in Forward Pass:
+
+`up2 = up1(cemb1 * up1 + temb1, down2)`
+
+In this example, the context embedding (cemb1) is multiplied with the output of the previous layer (up1), while the temporal embedding (temb1) is added to refine the network’s prediction based on the noise level at that time step. This combined input is then processed by the next layer (down2).
+
+#### 4. Multiscale Learning:
+
+The U-Net architecture’s ability to handle multiple scales of image information, from global structures to finer details, is especially beneficial in diffusion models. This allows the model to effectively denoise images by progressively refining both the coarse and detailed features as the reverse diffusion process proceeds.
+
+#### 5. Noise Prediction:
+
+During sampling, the U-Net predicts the noise present in the image at each step. The predicted noise is subtracted from the input image, refining the noisy image to a cleaner version through several iterations.
+
+#### 6. Maintaining Image Consistency:
+
+Since the output size is always the same as the input size, the U-Net ensures that the generated images remain consistent in resolution. This makes it suitable for tasks like super-resolution, text-to-image generation, and other image-based tasks in diffusion models.
+
+### To Conclude, Why use UNet for Difussion?
+* **Efficient Denoising**: The combination of downsampling, upsampling, and skip connections enables the U-Net to efficiently denoise images while preserving fine details.
+* **Incorporating Temporal and Contextual Information**: The ability to integrate temporal and contextual embeddings allows for guided/controlled generation, making the U-Net flexible in applications like text-to-image generation or super-resolution.
+* **Scalability and Stability**: The U-Net is scalable and can process images at different resolutions, while the use of embeddings helps stabilize the neural network during the iterative noise removal process.
+
+In summary, U-Net’s capacity to handle both global and fine features, along with its flexibility in processing embeddings, makes it an ideal choice for diffusion models. This architecture ensures high-quality image generation through its robust denoising process, which is crucial in generative modeling tasks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
