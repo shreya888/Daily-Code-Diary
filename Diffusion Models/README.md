@@ -50,6 +50,10 @@ Noise sample -> trained NN -> predicts noise (not sample image) -> subtract this
 Process -> Noise prediction, Subtraction from sample, and Re-noising
 Repeated across multiple iterations, progressively refining the sample until it closely resembles the original data distribution.
 
+#### Pseudocode:
+<img src="https://github.com/user-attachments/assets/17ce163f-5687-465a-9162-727d0ca741b3" width=50%>
+
+
 * #### Initial Setup:
   `Sample = Random Sample`
   The process starts with a random noise sample.
