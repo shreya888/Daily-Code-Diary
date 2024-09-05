@@ -8,10 +8,14 @@ Diffusion models have become popular due to their ability to generate high-quali
 The primary goal of diffusion models is to generate novel images that are not part of the training set. These models aim for the neural network (NN) to learn fine details (like hair or accessories), general outlines (such as the distinction between the head and body), and everything in between.
 
 ### Understanding the Noising Process:
-To help the model focus on different levels of detail, a process called "noising" is used, where progressively increasing amounts of noise are added to the images. This concept is inspired by a physical analogy—imagine dropping ink into clear water. Initially, the ink forms a concentrated drop, but as it disperses, the ink becomes increasingly disperses and eventually becomes indistinguishable from water as it mixes in homogeneously.
+To help the model focus on different levels of detail, a process called "noising" is used, where progressively increasing amounts of noise are added to the images. This concept is inspired by diffusion in Physics. Analogy—imagine dropping ink into clear water. Initially, the ink forms a concentrated drop, but as it disperses, the ink becomes increasingly disperses and eventually becomes indistinguishable from water as it mixes in homogeneously.
 
 ### How the Forward Process (Diffusion) Works:
-This is a process where data (like an image) is progressively corrupted by adding noise over several steps. By the end of this process, the data is almost indistinguishable from random noise.
+This is a process where data (like an image) is progressively corrupted by adding noise over several steps. By the end of this process, the data is almost indistinguishable from random noise. Pitorial representation below:
+
+<img src="https://github.com/user-attachments/assets/64c603cd-83e3-4041-8d1e-fe8fca38d3f7" width=50%>
+
+
 1. **No Noise**: The image is in its original, pristine form.
 2. **Little Noise**: Small amounts of noise suggest possible details that might need to be filled in by the model.
 3. **Moderate Noise**: More noise blurs finer details, but the general details and overall structure of the object remains discernible.
